@@ -1,0 +1,763 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: "Raleway",sans-serif;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.nav{
+    position: fixed;
+    background-color: transparent;
+    width: 100%;
+    padding: 30px 0;
+    top: 0;
+    z-index: 999;
+    transition: .3s linear;
+
+}
+
+.innerwidth{
+    max-width: 1300px;
+    margin: auto;
+    padding: 0 40px;
+
+}
+
+
+
+.nav .innerwidth{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.logo{
+    width: 192px;
+    height: 72px;
+    background-image: url("/client/Homepage/Images/logo/logoblue.png");
+    background-size: contain;
+    display: block;
+}
+
+
+
+.menubutton{
+    background: none;
+    width: 30px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+    z-index: 999;
+    display: none;
+}
+
+
+
+.menubutton span{
+    display: block;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 6px 0;
+    position: relative;
+    transition: .3s linear;
+}
+
+.sticky .menubutton span{
+    background-color: #111111;
+}
+
+.barmen a{
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 650;
+    margin-left: 50px;
+    transition: .2s linear;
+}
+
+
+.barmen a:hover{
+    color: #000000 !important;
+}
+
+.sticky .barmen a:hover{
+    color: #ba4141 !important;
+}
+
+.sticky{
+    background-color: #ffffff;
+    padding: 18px 0;
+}
+
+.sticky .logo {
+    display: none;
+
+}
+
+.sticky .bluelogo{
+
+    display: block;
+}
+
+.bluelogo{
+    width: 192px;
+    height: 72px;
+    display: none;
+}
+
+.sticky .barmen a{
+    color: #110202;
+
+}
+
+.sticky .barmen span{
+    background-color: #000000;
+}
+
+#home{
+    height: 1000vh;
+    min-height: 500px;
+    background-color: #b04141;
+    background-size: cover;
+}
+
+#home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+}
+
+#home .content{
+    width: 100%;
+    color: #ffffff;
+}
+
+#home .content h1{
+    font-size: 60px;
+    margin-top: 450px;
+    margin-bottom: 60px
+}
+
+#home .content h4{
+    font-size: 60px;
+    margin-top: 30px;
+    margin-bottom: 30px
+}
+
+#home .buttons{
+    margin-top: 100px;
+    margin-bottom: 281px;
+}
+#home .buttons a{
+    display: inline-block;
+    margin: 15px 30px;
+    color: #030202;
+    font-size: 15px;
+    font-weight: 650;
+    width: 180px;
+    border: 0 solid;
+    padding: 14px 0;
+    border-radius: 6px;
+    transition: .2s linear;
+    background-color: white;
+
+}
+
+#home .buttons a:hover {
+    background-color: #000000;
+    color: white;
+}
+
+@media screen and (max-width: 980px){
+    .menubutton{
+        display: block;
+    }
+
+    .barmen{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        background-color: #353b48;
+        top: 0;
+        right: -100%;
+        max-width: 400px;
+        padding: 80px 50px;
+        transition: .3s linear;
+    }
+
+    .barmen  a{
+        display: block;
+        font-size: 30px;
+        margin: 30px 0;
+    }
+
+    .sticky .barmen.active a{
+        background-color: white;
+    }
+
+    .sticky .barmen{
+        background-color: white;
+    }
+
+    .barmen.active{
+        right: 0;
+    }
+
+    .menubutton.active span:nth-child(1){
+        transform: rotate(-45deg);
+        top: 4px;
+    }
+
+    .menubutton.active span:nth-child(2){
+        opacity: 0;
+    }
+
+    .menubutton.active span:nth-child(3){
+        transform: rotate(45deg);
+        bottom: 14px;
+    }
+}
+
+hr{
+    width: 60%;
+    position: center;
+    background-color: #000000;
+    height: 4px;
+    margin-left: 550px;
+    margin-top: 200px;
+}
+
+
+.imageslideshow{
+    width: 800px;
+    length:450px;
+    margin-left: 120px;
+    margin-top: 120px;
+}
+
+.tabletext{
+    font-family: Raleway;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+
+.slider{
+    width: 800px;
+    height: 450px;
+    margin: 100px;
+    object-fit: contain;
+    background: url("https://lh3.googleusercontent.com/3K2vvYwEUSbJmu1tk070aGP04DDfxYNKhBXeLtiNacoX7tCzCdEVE69YcxYNhftgZpn8UIhouR5nJ5aT_Zz8DGqZqDSpZjdcaOuwm6JuNG4LTTBhgQv1UrPbHZ9z1GS9y3MN7mWlkpBH3YkmqOuHeDrpLWc-_LjrFxsBHgRs9efg-GDc335pbhaKHxg9cuS2QWvQxzrF_Ao5MxhLLEyxhYLYkQgjNl8_aenCHqVUaie13WgTbtPt6N3z4mhGVpFEnWyw7_tmDLDEzM10aXjyEICay3EH5DZ4WLWwYj82q6HTKwbPHWgK_G-NSnqsAhy9WBBaqkYKZbNwMgNAVIzN5ShIkirgBL0cFres4W-Ezf2z3H1YPNHUt0n2V9qUvQZlMXxhAXhHky3oIf23tHZWqOg3m2l42tkWxd1dRORO5LorKbcg9jQS_AN7g7J1d40j7k9_meEclEwmw3iotnVKCGjX-vHbwgP3bMqZ_LHZBJGE5DiCNnIPDwug33fmH8PDxniIEtSi0PYAFtPVooTeHw1lBenLaXuZcH8ckEGtBIC-eHsGr0QLS_eznM0PVp90j8ocx4R7wolaWsIP5kRUD1je_64VJE32n7VL0vhZ75IgD404fnmbfy0NO2dclvFAjvCO1npuIZV-_k7pDZI9hK9hncOHtKIS02iPa95TGAOYqgNvgJq2rhVv-Cxg=w1561-h876-no?authuser=0") center;
+    animation: slideInRight 15s infinite;
+    background-size: 100% 100%;
+}
+
+@keyframes slideInRight {
+    50%{
+        background-size: 100% 100%;
+        object-fit: contain;
+        background: url("https://lh3.googleusercontent.com/mGebbq6kijDDrnDdX7wkSUSBjBUbLa4vQuFqXxU75y36CW8C8XYSB3TgFxfKqqk35iT2TvvJkVPSwXRBQyo6UckfSuT5Cs9LO7Aq34h-U72Hvr3Gt8BjGL7NggoMNqPlE-jiIcLmOfiR5LqnP1JZL4K5_hyEqUohgOiYPGxOtUsq8KfxL3dVtxf36HI0qWvxkFsGxuDrCqF4o6Hv7Qn_jsqOnmkqZnb06DOfN7loShJQReWjBBSffBtbTNEoM5ZqYMPPB7X0evTJADrtF0T_YalLR2R9QkeiJJue7uwf824aZoliyXEToY1VBhubOTFvprFJS_F_hH9EqqIpX8teMWAJVPROsAz9GMu8NGLKSL7h1ra9ridUD4wth1bMx6QsNHGYFVzjY6vhtEaTBOvAr8JvcWZitum7jH0GupdbgY1GMJfarv51LDuSrKxTFKGUau2k57i-6-CwnJwdcJqP7udRTCUT3GztjQ7hPWvf5vlIeMvaEBrnD63vtRskXqIOd-BMiZBli2RZipL2b1ayx8D4LFLIavVdw1ctTOMyXvr9c9OBwJC5vAwQ628ys7Q4GpA3JdxtjdlWjHZgc23kEAR1AqNdRU7Ci-4ugBzYlqps1D4fG62Shk0u3UbRFgkhJHBQqDcy7jLc5e4FFl64hFpN6srzI1RA4dTGuqbxNgJOv0gTiPVDYrSdFqVo=w1561-h876-no?authuser=0") center;
+    }
+    100%{
+        background-size: 100% 100%;
+        object-fit: contain;
+        background: url("https://lh3.googleusercontent.com/3RQlIT61A7iRGmZ1kbw-8aBwTcSgwIIOGt_cU_Z91SQIl223nT-WMiZddbE0Hrn4JuBCq9XCuvNyjtE2fR9YZga_k7V3i9jEms52a34S--Dpoxhsk0Dxx9HSYMybszNv7xe5AS8ZQHKL8GmSqDTpFtt1zUBiA4YF6XGnAsMGodWrR476MRKJYHeu_DWJH2Kh3ofqUdfUxKUT4CpScuKDeTZ2C1RhDUEzLOuJnNxtWnm_DcEx59izQR0YtFLj6yQ5le5c6JQs9wxhMe3CpfVevWDnk-LOMQ0s0-J1s5En5BbYEP5vARy2U1lmOSUUXaZYgUCHJtrwKEo5_ZqvKaEr75Aytwoe6eKKsWZF-HH2OfK0a78G_hNOrVgJluxHDvNhQ1yjDGnLZvKA8v9kWYDukEIuBc547PCCdaWJGlIR12hc-8v_20GrbB0ZWmG9ff-hqQdWgRSNUcvB6-Ye3Bci1XNLfRqeC6VB1SmrPoJg9lqMSzUrhO5veSZ5k9d7IwhsTskmnKOkRU-j5bFWVJ6cYzWFwLCvRzYg8l4zNSIJM2QauG5-eVOOeWzA3GWiIa19ccOyMIIZ5yX6PryzmHLfVbt5PTMNBwx7SOGSc5caxZmM-lxDz_VGEMjEYwz4jlmk51AQWIvppZttdSJQ7jWQs5Th2nconhLpoZqebFWEj4qVeVjj2vRoVMGXolG7=w1561-h878-no?authuser=0") center;
+    }
+
+
+}
+
+
+.title{
+    text-align: center;
+    margin-bottom: 80px;
+    margin-top: 0px;
+    position: relative;
+    font-size: 26px;
+    font-family: Raleway;
+    padding-bottom: 26px;
+    color: #ffffff;
+    background-color: #353b48;
+}
+
+
+
+.title::before{
+    margin-top: 120px;
+    content: "";
+    text-align: center;
+    position: absolute;
+    width: 80px;
+    height: 3px;
+    background-color: #ffffff;
+    bottom: 0;
+    left: calc(50% - 40px);
+}
+
+.title::after{
+    margin-top: 120px;
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 10px;
+    background-color: #ba4141;
+    border: 4px solid #353b48;
+    left: calc(50% - 12px);
+    bottom: -7px;
+}
+
+section.dark{
+    background-color: #353b48;
+
+}
+
+.facilities{
+    position: center;
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.facility{
+    width: 400px;
+    height: 200px;
+    background-color: white;
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 6px;
+    margin: 40px 40px;
+    padding: 40px 40px;
+    cursor: pointer;
+    transition: .3s linear;
+}
+
+.facility h4{
+    font-size: 20px;
+    font-family: Raleway;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.facility p{
+    margin-top: 40px;
+    font-family: Raleway;
+    font-weight: bold;
+    color: #9d9d9d;
+}
+
+.facility:hover{
+    background-color: #ba4141;
+    border-color: #ba4141;
+}
+
+.facility:hover h4{
+    color: white;
+}
+
+.facility:hover p{
+    color: white;
+}
+
+.featured{
+    background-color: #b04141;
+}
+
+
+
+.lighttitle{
+    text-align: center;
+    margin-bottom: 80px;
+    margin-top: 0px;
+    position: relative;
+    font-size: 26px;
+    font-family: Raleway;
+    padding-bottom: 26px;
+    color: #ffffff;
+    background-color: #b04141;
+}
+
+.lighttitle::before{
+    margin-top: 120px;
+    content: "";
+    text-align: center;
+    position: absolute;
+    width: 80px;
+    height: 3px;
+    background-color: #ffffff;
+    bottom: 0;
+    left: calc(50% - 40px);
+}
+
+.lighttitle::after{
+    margin-top: 120px;
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 10px;
+    background-color: #353b48;
+    border: 4px solid #b04141;
+    left: calc(50% - 12px);
+    bottom: -7px;
+}
+
+.time-line,.builds{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: center;
+}
+
+.build{
+    width: calc(33% - 30px);
+    overflow: hidden;
+    border-radius: 6px;
+    margin: 30px 0;
+    position: relative;
+}
+
+.build img{
+    width: 100%;
+    height: 100%;
+}
+
+.build::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(129, 138, 146, 0.48);
+    transition: .2s linear;
+    opacity: 0;
+
+}
+
+.build .info{
+    position: absolute;
+    z-index: 2;
+    bottom: 40px;
+    left: 40px;
+    color: white;
+    font-family: Raleway;
+    font-weight: bold;
+    transition: .4s linear;
+    opacity: 0;
+}
+
+.build:hover::before,
+.build:hover .info
+{
+    opacity: 1;
+}
+
+.loginbutton{
+    border: none;
+    background-color: inherit;
+    padding: 14px 28px;
+    font-size: 20px;
+    font-family: Raleway;
+    font-weight: 650;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 20px;
+    transition: .2s linear;
+}
+
+.loginbutton:focus {
+    outline: 0;
+    box-shadow: none!important;
+}
+
+.loginbutton:hover{
+    color: #111111;
+}
+
+.sticky .loginbutton:hover{
+    color: #b04141;
+}
+
+.sticky .loginbutton{
+    color: #111111;
+}
+
+.otherloginbutton{
+    border: none;
+    background-color: inherit;
+    padding: 14px 14px;
+    margin-left: 2px;
+    font-size: 20px;
+    font-family: Raleway;
+    font-weight: 650;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    transition: .2s linear;
+}
+
+.otherloginbutton:focus {
+    outline: 0;
+    box-shadow: none!important;
+}
+
+.otherloginbutton:hover{
+    color: #111111;
+}
+
+.sticky .otherloginbutton:hover{
+    color: #b04141;
+}
+
+.sticky .otherloginbutton{
+    color: #111111;
+}
+
+
+.login-form{
+    width: calc(100% - 20px);
+    max-width: 500px;
+    background-color: #ffffff;
+    padding: 50px 40px;
+    position: fixed;
+    z-index: 0;
+    right: 450px;
+    top: 107px;
+}
+
+.login-form h1{
+    text-align: center;
+    margin: 27px 0;
+    color: #111;
+    font-size: 30px;
+
+}
+
+.textb{
+    margin-bottom: 12px;
+    position: relative;
+    border-color: #110303;
+}
+
+.textb input{
+    width: 100%;
+    height: 70px;
+    border: none;
+    border-radius: 4px;
+    color: #3c3f41;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 14px 60px 0 10px;
+}
+
+.placeholder{
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    position: absolute;
+    line-height: 70px;
+    top: 0;
+    left: 20px;
+    color: #9d9d9d;
+    user-select: none;
+    pointer-events: none;
+    border-color: #110303;
+}
+
+.show-password{
+    position: absolute;
+    right: 20px;
+    line-height: 70px;
+    color: #9d9d9d;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.textb input:focus ~ .placeholder,
+.textb input:valid ~ .placeholder{
+    left: 10px;
+    top: -16px;
+}
+
+
+.btn{
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: #bebebe;
+    color: #b04141;
+    font-size: 40px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    transition: .3s linear;
+    margin-left: calc(50% - 50px);
+}
+
+.btn:hover{
+    opacity: .50;
+}
+
+.login-form a{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    color: #555;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 8px;
+    transition: .2s linear;
+}
+
+.login-form a:hover{
+    color: #af4041;
+}
+
+.btn:disabled{
+    background-color: transparent;
+    color: #000000;
+    border: 2px solid;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 65%;
+}
+
+.profile{
+    border: none;
+    background-color: inherit;
+    padding: 14px 28px;
+    font-size: 20px;
+    font-family: Raleway;
+    font-weight: 650;
+    color: #000000;
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 50px;
+    transition: .2s linear;
+}
+
+.incorrect{
+    text-align: center;
+    color: red;
+    font-family: Raleway;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.incorrect h6{
+    font-size: 12px;
+}
+
+#instructions h5{
+    color: #353b48;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: Raleway;
+    text-align: center;
+    margin-top: 35px;
+}
+
+#instructions h7{
+    color: #353b48;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: Raleway;
+    text-align: center;
+    margin-top: 65px;
+}
+
+
+
+
+
+.closebutton{
+    border: none;
+    background-color: inherit;
+    font-size: 12px;
+    font-family: Raleway;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-block;
+    transition: .2s linear;
+    color: #9d9d9d;
+}
+
+.signuptext{
+    border: none;
+    background-color: inherit;
+    font-size: 1em;
+    font-family: Raleway, serif;
+    text-align: center;
+    position: center;
+    font-weight: bolder;
+    color: #6c7175;
+    margin-left: 140px;
+}
+
+.signuptext:hover{
+    border: none;
+    background-color: inherit;
+    font-size: 1em;
+    font-family: Raleway, serif;
+    text-align: center;
+    position: center;
+    margin-left: 140px;
+    color: #ba4141;
+}
+
+.button{
+    margin: 15px 30px;
+    color: #030202;
+    font-size: 15px;
+    font-weight: 650;
+    width: 180px;
+    border: 0 solid;
+    padding: 14px 0;
+    border-radius: 6px;
+    transition: .2s linear;
+    margin-top: 100px;
+    margin-bottom: 281px;
+    display: inline-block;
+}
+
+.button:hover{
+    color: white;
+    background-color: #110303;
+}
+
+
+.signup-form{
+    width: calc(100% - 20px);
+    max-width: 500px;
+    background-color: #ffffff;
+    padding: 50px 40px;
+    position: fixed;
+    z-index: 0;
+    right: 450px;
+    top: 107px;
+}
+
+.signup-form h1{
+    text-align: center;
+    margin: 27px 0;
+    color: #111;
+    font-size: 30px;
+
+}

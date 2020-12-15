@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:100px xmlns:100px xmlns:100px xmlns:100px xmlns:100px xmlns:100px>
+<head onload="logincheck()">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>PC Assembler</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel='shortcut icon' type='image/x-icon' href='Images/favicon.png' />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="./Javascript/scripts.js"></script>
+  <script src="./Javascript/login.js"></script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="innerwidth">
+      <img src="Images/logowhite.png" class="logo">
+      <img src="Images/logoblue.png" class="bluelogo">
+      <button class="menubutton">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="barmen">
+        <a href="https://fitchnetwork.co.uk/project">Home</a>
+        <button class="loginbutton" onclick="newbuildshow()"  id = "otherloginbutton">New Build</button>
+        <button class="loginbutton" onclick="newbuildshow()"  id = "otherloginbutton">My Builds</button>
+        <a href="#featuredscrollzone">Featured Builds</a>
+        <button class="loginbutton" onclick="openform()"  id = "loginbutton"> Login </button>
+      </div>
+    </div>
+  </nav>
+
+  <section id="home">
+    <div class="innerwidth">
+      <div class="content">
+        <h1 id="maintitle" ></h1>
+        <div class="buttons">
+          <input type='button'  class="button" onclick="newbuildshow()"  value='New Build' />
+          <a href="#">My saved builds</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<div style="background-color: #353b48; height: 120px;"></div>
+
+<section id="facilities" class="dark">
+  <div id="identifier"></div>
+  <div class="innerwidth">
+    <h1 class="title">Features</h1>
+    <div class="facilities">
+      <div class="facility">
+        <h4>New Builds</h4>
+        <p>Select here to start a new build and select the desired components</p>
+      </div>
+      <div class="facility">
+        <h4>Recommended builds</h4>
+        <p>Take a look at some recommended builds by specifying what you use it for.</p>
+      </div>
+      <div class="facility">
+        <h4>My Saved Builds</h4>
+        <p>Go back to previous builds you have saved to make additions or changes to the components.</p>
+      </div>
+      <div  class="facility">
+        <h4 href="#featuredbuilds">Featured Builds</h4>
+        <p href="#featuredbuilds">Take a look at some handpicked, featured builds of all types for this month</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <div style="background-color: #353b48; height: 120px;"></div>
+
+  <div id="featuredscrollzone" style="background-color: #b04141; height: 130px;"></div>
+
+<section id="featuredbuilds" class="featured">
+  <div class="innerwidth">
+    <h1 class="lighttitle">Featured Builds</h1>
+    <div class="builds">
+      <a class ="build">
+        <img src="Images/1.jpg" alt="">
+        <div class="info">
+          <h3>Build Specs</h3>
+          <div class="components">
+            GPU:<br></br>
+            CPU:<br></br>
+            RAM:<br></br>
+            Case: <br></br>
+            Storage: <br></br>
+            PSU: <br></br>
+          </div>
+        </div>
+      </a>
+      <a  class ="build">
+        <img src="Images/2.jpg" alt="">
+        <div class="info">
+          <h3>Build Specs</h3>
+          <div class="components">
+            GPU:<br></br>
+            CPU:<br></br>
+            RAM:<br></br>
+            Case: <br></br>
+            Storage: <br></br>
+            PSU: <br></br>
+          </div>
+        </div>
+      </a>
+      <a  class ="build">
+        <img src="Images/3.jpg" alt="">
+        <div class="info">
+          <h3>Build Specs</h3>
+          <div class="components">
+            GPU:<br></br>
+            CPU:<br></br>
+            RAM:<br></br>
+            Case: <br></br>
+            Storage: <br></br>
+            PSU: <br></br>
+          </div>
+        </div>
+      </a>
+      <a  class ="build">
+        <img src="Images/1.jpg" alt="">
+        <div class="info">
+          <h3>Build Specs</h3>
+          <div class="components">
+            GPU:<br></br>
+            CPU:<br></br>
+            RAM:<br></br>
+            Case: <br></br>
+            Storage: <br></br>
+            PSU: <br></br>
+          </div>
+        </div>
+      </a>
+      <a  class ="build">
+        <img src="Images/1.jpg" alt="">
+        <div class="info">
+          <h3>Build Specs</h3>
+          <div class="components">
+            GPU:<br></br>
+            CPU:<br></br>
+            RAM:<br></br>
+            Case: <br></br>
+            Storage: <br></br>
+            PSU: <br></br>
+          </div>
+        </div>
+      </a>
+      <a  class ="build">
+        <img src="Images/1.jpg" alt="">
+        <div class="info">
+          <h3></h3>
+          <div class="components">
+            GPU:<br></br>
+            CPU:<br></br>
+            RAM:<br></br>
+            Case: <br></br>
+            Storage: <br></br>
+            PSU: <br></br>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div style="background-color: #b04141; height: 60px;"></div>
+  </section>
+
+
+  <section id="newbuild" class="dark" style="display: none;">
+    <div style="background-color: #353b48; height: 60px;"></div>
+    <div id="identifier"></div>
+    <div class="innerwidth">
+      <h1 class="title">Start a new build</h1>
+      <div class="facilities">
+        <div class="facility">
+          <h4>New Builds</h4>
+          <p>Select here to start a new build and select the desired components</p>
+        </div>
+        <div class="facility">
+          <h4>Recommended builds</h4>
+          <p>Take a look at some recommended builds by specifying what you use it for.</p>
+        </div>
+        <div class="facility">
+          <h4>My Saved Builds</h4>
+          <p>Go back to previous builds you have saved to make additions or changes to the components.</p>
+        </div>
+        <div  class="facility">
+          <h4 href="#featuredbuilds">Featured Builds</h4>
+          <p href="#featuredbuilds">Take a look at some handpicked, featured builds of all types for this month</p>
+        </div>
+      </div>
+    </div>
+    <div style="background-color: #353b48; height: 60px;"></div>
+  </section>
+
+ <div class="login-form" id="loginformoverall" style="display: none">
+    <form method="post"  id="loginpopupform">
+      <div class = "signedin" id = "loggedin" style="display: none">
+        <button type="button" class="profile">My Profile</button>
+        <button type="button" class="profile" onclick="logout()">Log Out</button>
+      </div>
+      <div id="signinstuff">
+        <input type='button'  class="closebutton" onclick="closeloginpage()"  value='X close' />
+        <h1> Sign In </h1>
+        <div class = "incorrect" id = "wrongdeets" style="display: none;">
+          <h7>Incorrect username or password.</h7><br>
+          <h7>Try Again.</h7>
+        </div>
+        <div class="textb">
+          <input name ="username" type="text">
+          <div class="placeholder">Username</div>
+        </div>
+
+        <div class="textb">
+          <input name = "password" type="password">
+          <div class="placeholder">Password</div>
+        </div>
+    </form>
+  <input type='button'  class="btn fas fa-arrow-right" onclick="postUserLogin()" value=">"/>
+   <br>
+   <input type='button'  class="signuptext" onclick="createaccountshow()"  value='CREATE ACCOUNT' />
+ </div>
+
+  <div class="signup-form" id="signupformoverall" style="display: none">
+    <form method="post"  class="login-form" id="newuserpopup">
+
+      <div id="signinstuff">
+        <input type='button'  class="closebutton" onclick="closeloginpage()"  value='X close' />
+        <h1> Sign Up </h1>
+        <div class="incorrect">
+        <h7  id = "signuptrue" style="display: none">Successfully Signed Up.</h7>
+        </div>
+        <div class="textb">
+          <input name ="username" type="text">
+          <div class="placeholder">Username</div>
+        </div>
+
+        <div class="textb">
+          <input name ="email" type="text">
+          <div class="placeholder">Email Address</div>
+        </div>
+
+        <div class="textb">
+          <input name = "password" type="password">
+          <div class="placeholder">Password</div>
+        </div>
+
+    </form>
+    <input type='button'  class="btn fas fa-arrow-right" onclick="addUser()" value =">"/>
+  </div>
+
+
+
+</body>
+</html>
