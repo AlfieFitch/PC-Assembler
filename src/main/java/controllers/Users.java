@@ -160,22 +160,7 @@ public class Users {
         }
     }
 
-    @GET
-    @Path("cookie")
-    public static String validToken(@CookieParam("token")String token) {		// this method MUST be called before any data is returned to the browser
-        // token is taken from the Cookie sent back automatically with every HTTP request
-        System.out.println("Invoked cookie() on path user/cookie");
 
-        try {
-            PreparedStatement ps = Main.db.prepareStatement("SELECT userID FROM user WHERE token = ?");
-            ps.setString(1, token);
-            ResultSet logoutResults = ps.executeQuery();
-            return logoutResults.next() ? "true" : "false";   //logoutResults.next() will be true if there is a record in the ResultSet
-        } catch (Exception exception) {
-            System.out.println("Database error" + exception.getMessage());
-            return "false";
-        }
-    }
     @POST
     @Path("logout")
     public static String logout(@CookieParam("token") String token){

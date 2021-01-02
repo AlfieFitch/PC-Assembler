@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:100px xmlns:100px xmlns:100px xmlns:100px xmlns:100px xmlns:100px>
+<head onload="logincheck()">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login | PC Assembler</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel='shortcut icon' type='image/x-icon' href='Images/favicon.png' />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./Javascript/scripts.js"></script>
+    <script src="./Javascript/login.js"></script>
+</head>
+<body style="background-color: #b04141">
+
+<nav class="nav">
+    <div class="innerwidth">
+        <img src="Images/logowhite.png" class="logo">
+        <img src="Images/logoblue.png" class="bluelogo">
+        <button class="menubutton">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="barmen">
+            <a href="http://fitchnetwork.co.uk:2056/client/index.html">Home</a>
+            <button class="loginbutton" onclick="newbuildshow()"  id = "otherloginbutton">New Build</button>
+            <button class="loginbutton" onclick="newbuildshow()"  id = "otherloginbutton">My Builds</button>
+            <a href="#featuredscrollzone">Featured Builds</a>
+            <button class="loginbutton" onclick="openform()"  id = "loginbutton"> Login </button>
+        </div></div>
+</nav>
+
+
+<section class="login-formpage" id="loginformoveralllogin" style="display: block">
+    <form method="post"  id="loginpopupform">
+        <div id="signinstuff">
+            <h1> Sign in for access </h1>
+            <br>
+            <div class = "incorrect" id = "wrongdeets" style="display: none;">
+                <h7>Incorrect username or password.</h7><br>
+                <h7>Try Again.</h7>
+            </div>
+            <br>
+            <div class="textb">
+                <input name ="username" type="text" required>
+                <div class="placeholder">Username</div>
+            </div>
+
+            <div class="textb">
+                <input name = "password" type="password" required>
+                <div class="placeholder">Password</div>
+            </div>
+    </form>
+    <input type='button'  class="btn fas fa-arrow-right" onclick="postUserLogin()" value=">"/>
+    <br>
+    <input type='button'  class="signuptext" onclick="createaccountshow()"  value='CREATE ACCOUNT' />
+</section>
+
+<div class="signup-formpage" id="signupformoverall" style="display: none">
+    <form method="post"  class="login-formpage" id="newuserpopup">
+        <div id="signinstuff">
+            <input type='button'  class="closebutton" onclick="closesignin()"  value='Back' />
+            <br>
+            <br>
+            <h1> Sign Up </h1>
+            <br>
+            <div class="incorrect">
+                <h7  id = "signuptrue" style="display: none">Successfully Signed Up.</h7>
+                <br>
+            </div>
+            <div class="textb">
+                <input name ="username" type="text" required>
+                <div class="placeholder">Username</div>
+            </div>
+
+            <div class="textb">
+                <input name ="email" type="text" required>
+                <div class="placeholder">Email Address</div>
+            </div>
+
+            <div class="textb">
+                <input name = "password" type="password" required>
+                <div class="placeholder">Password</div>
+            </div>
+
+    </form>
+    <input type='button'  class="btn fas fa-arrow-right" onclick="Formvalidation()" value =">"/>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:100px xmlns:100px xmlns:100px xmlns:100px xmlns:100px xmlns:100px style="min-height: 100vh">
+<head onload="logincheck()">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>New Build | PC Assembler</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel='shortcut icon' type='image/x-icon' href='Images/favicon.png' />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./Javascript/scripts.js"></script>
+    <script src="./Javascript/login.js"></script>
+
+    <style>
+        /* width */
+        ::-webkit-scrollbar {
+            margin-right: 10px;
+            width: 10px;
+            background: #353b48;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: none;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #b04141;
+            border-radius: 6px;
+            margin-right: 6px;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #803030;
+        }
+    </style>
+</head>
+<body onload="pageload()">
+
+<nav class="nav">
+    <div class="innerwidth">
+        <img src="Images/logowhite.png" class="logo">
+        <img src="Images/logoblue.png" class="bluelogo">
+        <button class="menubutton">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="barmen">
+            <button class="loginbutton" onclick="homepage()"  id = "otherloginbutton">Home</button>
+            <button class="loginbutton" onclick="newbuild()"  id = "otherloginbutton">New Build</button>
+            <button class="loginbutton" onclick="newbuild()"  id = "otherloginbutton">My Builds</button>
+            <a src="index.html#featuredscrollzone">Featured Builds</a>
+            <button class="loginbutton" onclick="openform()"  id = "loginbutton"> Login </button>
+        </div>
+        </div>
+    </div>
+</nav>
+<div style="background-color: #353b48; height: 120px"></div>
+
+<section id="instructions" class="dark">
+    <div style="background-color: #353b48; height: 60px;"></div>
+    <div id="identifier"></div>
+    <div class="innerwidth">
+        <div class = "newbuildtitle" id="titletochange">Start a new build</div>
+        <div class = 'instruct' id="instruct" style="display: block">
+            The PC Assembler builder allows you to select components to put into a new build and test for compatibility and price. You can also save a build and return to it later.<br><br><br>
+            The builder is very easy to use:<br><br><br>
+            - Look through the list of components below and select each one by one by clicking anywhere inside the white box for that component.<br><br>
+            - Once you reach the end and have selected all of the parts you wish to use, you can press save to save the build to your account, or you can press finish to work out total price and compatibility.<br><br>
+            - Don't worry, you can always save your build even after selecting finish.<br>
+        </div>
+        <div>
+            <h9 class="noname" id="noname" style = "display: none;">Enter the name of the new build!</h9><br>
+            <input type="text" id="buildname" class="inputbox" placeholder="Enter Build Name"/>
+            <input type='button' id="startbutton" class="showinstuctions" onclick="startlisting()"  value='Start' style="display: block" />
+        </div>
+    </div>
+    <div style="background-color: #353b48; height: 30px;"></div>
+</section>
+
+<section id="newbuildcpu" class="dark" style ="min-height: 479px; overflow-y: hidden; display: none;">
+    <div id="identifier"></div>
+    <div class="innerwidth">
+        <div class = "overalltable">
+            <legend id ="legend" class="tabletitle" style="display: none">Select CPU:</legend>
+            <table class = "tabletable" id="CPUtable"></table>
+        </div>
+
+    </div>
+    <div id = "cpuselected" class = "currentlyselected">Nothing Selected</div>
+    <div style="background-color: #353b48; height: 30px;"></div>
+    <div class = "nothingselected" id="notselect">Please Select a component</div>
+    <input type='button' id="showmorecpu" class="showmore" onclick="showgpu()"  value='Next' />
+    <div style="background-color: #353b48; height: 60px;"></div>
+</section>
+
+
+
+<section id="newbuildgpu" class="dark" style ="min-height: 479px; overflow-y: hidden; display: none;">
+    <div id="identifier"></div>
+    <div class="innerwidth">
+        <div class = "overalltable">
+            <legend id ="legend" class="tabletitle" style="display: block">Select GPU:</legend>
+            <table id="GPUtable"></table>
+        </div>
+
+    </div>
+    <div id = "gpuselected" class = "currentlyselected">Nothing Selected</div>
+    <div style="background-color: #353b48; height: 30px;"></div>
+    <input type='button' id="showmorecpu" class="showmore" onclick="showram()"  value='Next' />
+    <div style="background-color: #353b48; height: 60px;"></div>
+</section>
+
+
+<section id="newbuildram" class="dark" style ="min-height: 479px; overflow-y: hidden; display: none;">
+    <div id="identifier"></div>
+    <div class="innerwidth">
+        <div class = "overalltable">
+            <legend id ="legend" class="tabletitle" style="display: block">Select Ram:</legend>
+            <table id="GPUtable"></table>
+        </div>
+
+    </div>
+    <div id = "ramselected" class = "currentlyselected">Nothing Selected</div>
+    <div style="background-color: #353b48; height: 30px;"></div>
+    <input type='button' id="showmorecpu" class="showmore" onclick="savethebuild()"  value='Save' />
+    <div style="background-color: #353b48; height: 60px;"></div>
+</section>
+
+
+
+<section class="login-form" id="loginformoverall" style="display: none">
+    <form method="post"  id="loginpopupform">
+        <div class = "signedin" id = "loggedinnew" style="display: none">
+            <input type='button'  class="closebutton" onclick="closeloginpage()"  value='X close' style="margin-bottom: 20px" />
+            <br>
+            <button type="button" class="profile">My Profile</button>
+            <button type="button" class="profile" onclick="logout()">Log Out</button>
+        </div>
+        <div id="signinstuff">
+            <input type='button'  class="closebutton" onclick="closeloginpage()"  value='X close' />
+            <h1> Sign In </h1>
+            <div class = "incorrect" id = "wrongdeets" style="display: none;">
+                <h7>Incorrect username or password.</h7><br>
+                <h7>Try Again.</h7>
+            </div>
+            <div class="textb">
+                <input id="username" name ="username" type="text" required>
+                <div class="placeholder">Username</div>
+            </div>
+
+            <div class="textb">
+                <input id = "password" name = "password" type="password" required>
+                <div class="placeholder">Password</div>
+            </div>
+    </form>
+    <input type='button'  class="btn fas fa-arrow-right" onclick="postUserLogin()" value=">"/>
+    <br>
+    <input type='button'  class="signuptext" onclick="createaccountshow()"  value='CREATE ACCOUNT' />
+</section>
+
+<div class="signup-form" id="signupformoverall" style="display: none">
+    <form method="post"  class="login-form" id="newuserpopup">
+
+        <div id="signinstuff">
+            <input type='button'  class="closebutton" onclick="closeloginpage()"  value='X close' />
+            <h1> Sign Up </h1>
+            <div class="incorrect">
+                <h7  id = "signuptrue" style="display: none">Successfully Signed Up.</h7>
+            </div>
+            <div class="textb">
+                <input name ="username" type="text" required>
+                <div class="placeholder">Username</div>
+            </div>
+
+            <div class="textb">
+                <input id = "email" name ="email" type="text" required>
+                <div class="placeholder">Email Address</div>
+            </div>
+
+            <div class="textb">
+                <input name = "password" type="password" required>
+                <div class="placeholder">Password</div>
+            </div>
+
+    </form>
+    <input type='button'  class="btn fas fa-arrow-right" onclick="addUser()" value =">"/>
+</div>
+
+
+</body>
+</html>
